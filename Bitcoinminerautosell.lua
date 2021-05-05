@@ -9,8 +9,7 @@ while (true)  do
     game:GetService("ReplicatedStorage").Events.ExchangeMoney:FireServer(true)
     wait(0.5)
     game:GetService("ReplicatedStorage").Events.ExchangeMoney:FireServer(false)
-    game.Workspace.Candyman_42.DarkGrey.CFrame = CFrame.new(2048, 2048, 2048)
-    game.Workspace.Candyman_42.DarkGrey.Size = Vector3.new(2048, 2048, 2048)
+    
     if(AutoOverclock)then
         game:GetService("ReplicatedStorage").Events.Overclk:InvokeServer(Overclock)
 
