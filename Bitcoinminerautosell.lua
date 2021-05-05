@@ -3,22 +3,20 @@
 
 AutoOverclock = true
 Overclock = 100 --change from 5 to 150 it is how much efficincy
+
 while (true)  do
-    wait(1)
+    wait(0.5)
     game:GetService("ReplicatedStorage").Events.ExchangeMoney:FireServer(true)
+    wait(0.5)
     game:GetService("ReplicatedStorage").Events.ExchangeMoney:FireServer(false)
-    if(AutoOverclock) then
-        
+    game.Workspace.Candyman_42.DarkGrey.CFrame = CFrame.new(2048, 2048, 2048)
+    game.Workspace.Candyman_42.DarkGrey.Size = Vector3.new(2048, 2048, 2048)
+    if(AutoOverclock)then
         game:GetService("ReplicatedStorage").Events.Overclk:InvokeServer(Overclock)
 
         end
 end
 
-game:GetService("ReplicatedStorage").Events.Overclk:InvokeServer(Overclock)
-wait(10)
-
-
-    
 local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
 vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
