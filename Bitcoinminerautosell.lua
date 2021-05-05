@@ -1,10 +1,11 @@
 --hi this is my first script other then just jumphight and walkspeed
+
 AutoOverclock = true
 Overclock = 100 --change from 5 to 150 it is how much efficincy
 while (true)  do
     wait(1)
     game:GetService("ReplicatedStorage").Events.ExchangeMoney:FireServer(true)
-    
+    game:GetService("ReplicatedStorage").Events.ExchangeMoney:FireServer(false)
     
 end
 while (AutoOverclock) do
